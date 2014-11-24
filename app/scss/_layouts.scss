@@ -1,0 +1,49 @@
+body {
+	background: white;
+}
+
+header {
+	@include gradient(#5AA9D1, #2978A0);
+	border-top: 2px solid #7EBDDD;
+	border-bottom: 2px solid #205F7F;
+	padding: 2em 0;
+	text-align: center;
+}
+
+section {
+	header {
+		background: #0099CC;
+		border-top: 2px solid #7EBDDD;
+		border-bottom: 2px solid #205F7F;
+		padding: 1em 0;
+		text-align: left;
+
+		ul {
+			margin: 0;
+			padding: 0;
+			list-style: none;
+
+			li {
+
+				&.label { padding: 0.8em 0.4em; }
+			}
+		}
+	}
+}
+
+.table {
+	@include gradient(#F3F3F3, #DCDCDC);
+	border-top: 2px solid #FFFFFF;
+	border-bottom: 2px solid #797979;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+
+	li {
+		padding: 0.8em 0;
+		border-right: 2px solid #797979;
+		border-left: 2px solid #FFFFFF;
+
+		&.label { padding: 0.8em 0.4em; }
+	}
+}

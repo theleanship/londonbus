@@ -1,0 +1,62 @@
+/**
+ *	Notes: box-sizing breaks <IE8;
+ *
+ */
+
+$gutter-width: 0;
+$colWidth: 6.25%;
+
+*, *:after, *:before {
+-webkit-box-sizing: border-box;
+-moz-box-sizing: border-box;
+box-sizing: border-box;
+}
+
+.grid {
+	width: 100%;
+}
+
+.row {
+	@extend .clearfix;
+}
+
+.col-1, .col-2, .col-3, .col-4,
+.col-5, .col-6, .col-7, .col-8,
+.col-9, .col-10, .col-11, .col-12,
+.col-13, .col-14, .col-15, .col-16 {
+	margin-right: $gutter-width;
+	float: left;
+}
+
+.col-1 { width: $colWidth; }
+.col-2 { width: $colWidth*2; }
+.col-3 { width: $colWidth*3; }
+.col-4 { width: $colWidth*4; }
+.col-5 { width: $colWidth*5; }
+.col-6 { width: $colWidth*6; }
+.col-7 { width: $colWidth*7; }
+.col-8 { width: $colWidth*8; }
+.col-9 { width: $colWidth*9; }
+.col-10 { width: $colWidth*10; }
+.col-11 { width: $colWidth*11; }
+.col-12 { width: $colWidth*12; }
+.col-13 { width: $colWidth*13; }
+.col-14 { width: $colWidth*14; }
+.col-15 { width: $colWidth*15; }
+.col-16 { width: $colWidth*16; }
+
+
+
+
+.clearfix {
+    zoom:1;
+    &:before, &:after {
+        content: "\0020";
+        display: block;
+        height: 0;
+        overflow: hidden;
+    }
+    &:after {
+        clear: both;
+    }
+}
