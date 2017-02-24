@@ -11,9 +11,14 @@ class Bus:
         self.BusID = obj["BusID"]
         self.Registration = obj["Registration"]
         self.Trips = obj["Trips"]
+        self.add_jess_to_the_github_bus()
 
         if new:
             self.save()
+            
+    def add_jess_to_the_github_bus(self):
+        print "YOU CAN'T KEEP ME OUT GRAEME!"
+        self.jess_is_on_the_github_bus = True
 
     def save(self):
         existing = self.db.buses.find_one({ 'BusID': self.BusID })
